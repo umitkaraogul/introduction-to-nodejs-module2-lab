@@ -1,0 +1,55 @@
+POST http://localhost:3000/posts HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Google Search",
+    "url": "https://google.com",
+    "text":"This is a post",
+    "comments": []
+}
+
+###
+
+PUT http://localhost:3000/posts/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Google Search",
+    "url": "https://google.com",
+    "text":"This is a search",
+    "comments": []
+}
+
+###
+
+DELETE http://localhost:3000/posts/1
+
+###
+
+GET http://localhost:3000/posts
+content-type: application/json
+
+###
+
+
+POST http://localhost:3000/posts/1/comments
+content-type: application/json
+
+{ "text": "New Comment" }
+
+###
+
+PUT http://localhost:3000/posts/1/comments/0 HTTP/1.1
+content-type: application/json
+
+{ "text": "Update Comment" }
+
+###
+
+DELETE http://localhost:3000/posts/1/comments/0
+
+###
+
+GET http://localhost:3000/posts/1/comments
+content-type: application/json
+
